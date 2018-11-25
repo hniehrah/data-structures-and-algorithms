@@ -173,7 +173,20 @@ You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
 ------------------------------------------------------------------------------------------------ */
 
 const sortSchedule = (arr) => {
-  // Solution code here...
+  let daysOfWeek= {'monday': 1, 'tuesday': 2, 'wednesday': 3, 'thursday': 4, 'friday': 5};
+
+  return arr.sort((a, b) => {
+    let numA = daysOfWeek[a.dayOfWeek.toLowerCase()];
+    let numB = daysOfWeek[b.dayOfWeek.toLowerCase()]
+  
+    if(a.dayOfWeek === b.dayOfWeek){   
+      if(a.start === b.start){
+        return a.end - b.end;
+      }   
+      return a.start - b.start;
+    }
+    return numA > numB;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -292,7 +305,7 @@ describe('Testing challenge 9', () => {
   });
 });
 
-xdescribe('Testing challenge 10', () => {
+describe('Testing challenge 10', () => {
   test('It should sort meetings by when they happen', () => {
     expect(sortSchedule(meetings)).toStrictEqual([
       new Meeting('Monday', '0900', '0945'),
