@@ -14,9 +14,8 @@ For example:
 
 const isNum = (input) => {
   let regex = /\d/g;
-  if ((input.toString()).match(regex)){
-    return true;
-  } else return false;
+  if ((input.toString()).match(regex)) return true;
+  else return false;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -28,12 +27,12 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  let regex = /[A-Z]/;
+  let regex = /^[A-Z]/;
   let words = str.split(' ');
   let output = [];
   words.forEach((element) => {
-    if ((element.charAt(0)).match(regex)) output.push(element);  
-  })
+    if (element.match(regex)) output.push(element);  
+  }) 
   return output;
 };
 
@@ -44,10 +43,10 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  let regex = /[a-j]/i;
+  let regex = /^[a-j]/i;
   let output = [];
   arr.forEach((element) => {
-    if ((element.charAt(0)).match(regex)) output.push(element);
+    if (element.match(regex)) output.push(element);
   })
   return output;
 };
@@ -65,7 +64,7 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
-  let regex = /^(?:(?:[Oo])(?:ct)(?:ober)?)$/g;
+  let regex = /\b[Oo](ct)(ober)*\b/g;
   if (input.toString().match(regex)) return true;
   else return false;
 };
@@ -82,13 +81,7 @@ The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "
 
 const noPunctuation = str => {
   let regex = /\w+\b(?:\s)/gi;
-  let regArray = [], output = [];
-  while ((regArray = regex.exec(str)) !== null) {
-    regArray.forEach((match) => {
-      output.push(`${match}`);
-    });
-  }
-  return output;
+  return str.match(regex);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -104,7 +97,9 @@ For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 ------------------------------------------------------------------------------------------------ */
 
 let hangman = (str) => {
-  // Solution code here...
+  let regex = /[aeiou]/gi;
+  let newString = str.replace(regex, '_');
+  return newString;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -120,7 +115,8 @@ Hint: All of these words end with the letters "ells".
 const seashells = 'She sells seashells by the seashore. The shells she sells are surely seashells. So if she sells shells on the seashore, I\'m sure she sells seashore shells.';
 
 const findShells = (str) => {
-  // Solution code here...
+  let regex = /\b([s]\w*(?:ells))\b/ig;
+  return str.match(regex);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -201,7 +197,7 @@ describe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   let startString = 'This is a regex challenge. We are trying to create a hangman phrase where all of the vowels are missing!';
 
   test('It should remove the vowels from the hangman string and replace them with underscores', () => {
@@ -213,7 +209,7 @@ xdescribe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should return an array of instances of "sells", shells", and "seashells"', () => {
     expect(findShells(seashells)).toStrictEqual(['sells', 'seashells', 'shells', 'sells', 'seashells', 'sells', 'shells', 'sells', 'shells']);
     expect(findShells(seashells).length).toStrictEqual(9);
