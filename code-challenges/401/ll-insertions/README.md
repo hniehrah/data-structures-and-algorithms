@@ -7,7 +7,7 @@
 
 ## Whiteboard
 Whiteboarding done with Lorin S.
-[IMG]http://i66.tinypic.com/2reiie1.jpg[/IMG]
+!(http://i66.tinypic.com/2reiie1.jpg)
 
 ## Tests
 * Can successfully add a node to the end of the linked list
