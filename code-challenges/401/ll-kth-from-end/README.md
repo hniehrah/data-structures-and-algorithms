@@ -1,10 +1,15 @@
 # Code Challenge 07
 ### Linked List Kth Value
 
-## Feature Tasks
+## Challenge
 * Find kth value from the **end** of a linked list.
 
-## Whiteboard
+## Approach
+* Iterated once through linked list to determine its length using a counter variable.
+* Iterated once more through the linked list (counter - k) times.
+* Returned the current value.
+
+## Solution
 ![Whiteboard](whiteboard.jpg);
 
 ## Tests
