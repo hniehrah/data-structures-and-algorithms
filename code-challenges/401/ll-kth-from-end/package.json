@@ -1,0 +1,14 @@
+{
+  "name": "ll-kth-from-end",
+  "version": "1.0.0",
+  "description": "Code Challenge 07",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "author": "HN",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.1.0"
+  }
+}
