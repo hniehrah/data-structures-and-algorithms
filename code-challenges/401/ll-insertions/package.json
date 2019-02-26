@@ -1,0 +1,11 @@
+{
+  "name": "ll-insertions",
+  "version": "1.0.0",
+  "description": "Code Challenge 06",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "author": "HN",
+  "license": "MIT"
+}
