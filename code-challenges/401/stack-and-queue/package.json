@@ -1,0 +1,19 @@
+{
+  "name": "stack-and-queue",
+  "version": "1.0.0",
+  "description": "code challenge",
+  "main": "node.js",
+  "scripts": {
+    "test": "jest --verbose",
+    "test-watch": "jest --watchAll -verbose"
+  },
+  "author": "HN",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^24.3.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
