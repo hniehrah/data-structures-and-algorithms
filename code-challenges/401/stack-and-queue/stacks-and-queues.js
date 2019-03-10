@@ -7,7 +7,7 @@ class Stack{
     this.top = null;
   }
   push(value){
-    const temp = this.top; // If top !== null, then moves it next
+    const temp = this.top;
     this.top = new Node(value);
     this.top.next = temp;
   }
@@ -24,17 +24,34 @@ class Stack{
 class Queue{
   constructor(){
     this.front = null;
+    this.rear = null;
   }
   enqueue(value){
-    const temp = this.front;
-    this.rear = new Node(value);
-  }
-  dequeue(){
+    // Worked with Skyler on this portion
+    let newNode = new Node(value);
 
+    if (this.rear === null) {
+      this.front = newNode;
+      this.rear = newNode;
+    } else {
+      this.rear.next = newNode;
+      this.rear = newNode;
+    }
   }
+
+  dequeue(){
+    const output = this.front.value;
+    if (this.front || this.front.next) {
+      this.front = this.front.next;
+    }
+    if (this.front === null) this.rear = null;
+    return output;
+  }
+
   peek(){
     return this.front.value;
   }
+
 }
 
 module.exports = { Stack, Queue };
