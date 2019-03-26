@@ -1,0 +1,14 @@
+{
+  "name": "ll_merge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ll-merge.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "author": "HN",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^24.5.0"
+  }
+}
