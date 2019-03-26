@@ -15,7 +15,7 @@
 * Once we're done traversing both listA and listB, it returns the head of the new linked list.
 
 ## Solution
-![Whiteboard](whiteboard.jpg)
+![Whiteboard](./assets/whiteboard.jpg)
 
 ## Tests
 * Can successfully zipper-merge two linked lists that contain the same amount of nodes.
