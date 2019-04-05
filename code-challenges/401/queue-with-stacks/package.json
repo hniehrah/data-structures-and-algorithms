@@ -1,0 +1,14 @@
+{
+  "name": "queue-with-stacks",
+  "version": "1.0.0",
+  "description": "=================================================",
+  "main": "queue-with-stacks.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "HN",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^24.7.1"
+  }
+}
