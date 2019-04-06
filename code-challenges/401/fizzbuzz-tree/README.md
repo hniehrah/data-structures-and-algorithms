@@ -29,5 +29,5 @@
 * Should remain the same if not divisible by either 3 or 5.
 
 ## Big O
-* Time - O(2^n)
+* Time - O(log n)
 * Space - O(1)
