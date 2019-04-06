@@ -17,6 +17,9 @@ const fizzbuzzTree = (root) => {
     }
   }
 
+  fizzbuzzTree(root.left);
+  fizzbuzzTree(root.right);
+
   return root;
 };
 
