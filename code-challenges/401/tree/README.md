@@ -1,30 +1,33 @@
-# Code Challenge 11
-### Queue with Stacks
+# Code: Trees
+=================================================
+
+## Trees
+
+### Author: HN
+
+### Links and Resources
+* [repo](https://github.com/xenalara/data-structures-and-algorithms/tree/master/code-challenges/401/tree)
+
+#### Description
+Code Challenge Practice implementing a tree.
+
 
 ## Challenge
-* Create a brand new `PseudoQueue` class. Do not use an existing Queue. Instead, this PseudoQueue class will implement our standard queue interface (the two methods listed below), but will internally only utilize 2 Stack objects. Ensure that you create your class with the following methods:
-  * `enqueue(value)` which inserts value into the PseudoQueue, using a first-in, first-out approach.
-  * `dequeue` which extracts a value from the PseudoQueue, using a first-in, first-out approach.
-
-## Approach
-* Creates a class with a constructor that has two stacks - stack1 and stack2
-* Stack1 and Stack2 are `Stack` objects that contain a `front` property and can be traversed like nodes
-* `enqueue(value)`
-  * Uses Stack .push(value) and pushes to stack1
-  * Traverses stack1 and pushes the value to stack2 in order to reverse the order
-* `dequeue`
-  * If both stack1 and stack2 are null, returns an error
-  * If stack1 is not null, but stack2 is null, then returns value of `stack1.pop()`
-  * If stack2 is not null, then returns value of `stack2.pop()`
-
-## Solution
-![Whiteboard](assets/whiteboard.jpg)
+* Create a `Node` class that has properties for the value stored in the node, the left child node, and the right child node.
+* Create a `BinaryTree` class
+  * Define a method for each of the depth first traversals called `preOrder`, `inOrder`, and `postOrder` which returns an array of the values, ordered appropriately.
+  
+* Create a BinarySearchTree class
+  * Define a method named `add` that accepts a `value`, and adds a new node with that value in the correct location in the binary search tree.
+  * Define a method named `contains` that accepts a `value`, and returns a boolean indicating whether or not the value is in the tree at least once.
 
 ## Tests
 * `npm test`
-* Can successfully enqueue 
-* Can successfully dequeue
-
-## Big O
-* Time - O(n) for enqueue and O(1) for dequeue
-* Space - O(1)
+* Can successfully instantiate an empty tree
+* Can successfully instantiate a tree with a single root node
+* Can successfully add a left child and right child to a single root node
+* Can successfully return a collection from a preorder traversal
+* Can successfully return a collection from an inorder traversal
+* Can successfully return a collection from a postorder traversal
+* Can successfully add to a binary search tree in the proper order
+* Can successfully check if a binary search tree contains a given value.
