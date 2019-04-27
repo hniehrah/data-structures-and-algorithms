@@ -28,7 +28,7 @@ Code challenges that involve implementing data structures and algorithms.
 
 #### Linked List
 - [Linked List Insertions](https://github.com/xenalara/data-structures-and-algorithms/tree/master/code-challenges/401/ll-insertions)
-- [Finding Kth Value from end of a Linked List](https://github.com/xenalara/data-structures-and-algorithms/tree/master/code-challenges/401/ll-kth-from-end
+- [Finding Kth Value from end of a Linked List](https://github.com/xenalara/data-structures-and-algorithms/tree/master/code-challenges/401/ll-kth-from-end)
 - [Zipper Merge Two Linked Lists](https://github.com/xenalara/data-structures-and-algorithms/tree/master/code-challenges/401/ll_merge)
 
 #### Queues and Stacks
