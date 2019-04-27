@@ -1,6 +1,6 @@
 # Code Challenges
 
-## 301
+## Basics
 Code challenges that involve practicing different methods for arrays, objects, and Regex.
 
 - [Array Filter](https://github.com/xenalara/data-structures-and-algorithms/tree/master/code-challenges/401/prework/array-filter)
@@ -18,7 +18,7 @@ Code challenges that involve practicing different methods for arrays, objects, a
 - [Split, Join, Slice, Splice](https://github.com/xenalara/data-structures-and-algorithms/tree/master/code-challenges/401/prework/split-join-slice-splice)
 - [Value vs Reference](https://github.com/xenalara/data-structures-and-algorithms/tree/master/code-challenges/401/prework/value-vs-reference)
 
-## 401
+## Advanced
 Code challenges that involve implementing data structures and algorithms.
 
 #### Binary Trees
